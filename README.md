@@ -23,7 +23,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Screenshot
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/Prabhjot143/PhoenixNotes/blob/master/Images/1.png" height="350" width="200"/>&nbsp;&nbsp;<img src="https://github.com/Prabhjot143/PhoenixNotes/blob/master/Images/2.pngg" height="350" width="200"/>&nbsp;&nbsp;<img src="https://github.com/Prabhjot143/PhoenixNotes/blob/master/Images/3.png" height="350" width="200"/>&nbsp;&nbsp;<img src="https://github.com/Prabhjot143/PhoenixNotes/blob/master/Images/4.png" height="350" width="200"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/Prabhjot143/PhoenixNotes/blob/master/Images/1.png" height="350" width="200"/>&nbsp;&nbsp;<img src="https://github.com/Prabhjot143/PhoenixNotes/blob/master/Images/2.png" height="350" width="200"/>&nbsp;&nbsp;<img src="https://github.com/Prabhjot143/PhoenixNotes/blob/master/Images/3.png" height="350" width="200"/>&nbsp;&nbsp;<img src="https://github.com/Prabhjot143/PhoenixNotes/blob/master/Images/4.png" height="350" width="200"/>
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/Prabhjot143/PhoenixNotes/blob/master/Images/5.png" height="350" width="200"/>&nbsp;&nbsp;<img src="https://github.com/Prabhjot143/PhoenixNotes/blob/master/Images/6.png" height="350" width="200"/>&nbsp;&nbsp;<img src="https://github.com/Prabhjot143/PhoenixNotes/blob/master/Images/7.png" height="350" width="200"/>&nbsp;&nbsp;<img src="https://github.com/Prabhjot143/PhoenixNotes/blob/master/Images/8.png" height="350" width="200"/>
 
