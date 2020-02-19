@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.AllNotesActivity">
+
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            tools:layout_editor_absoluteY="731dp" />
+
+        <SearchView
+            android:id="@+id/etSearch"
+            style="@android:style/Widget.Material.SearchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#06A513"
+            android:backgroundTint="#06A513"
+            android:visibility="visible" />
+
+
+        <!--Recycler for list-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/categories_rv"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:visibility="visible">
+
+    </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/btnCategories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#189214"
+                android:onClick="onViewCategoriesClick"
+                android:text="Categories"
+                android:textColor="#F2F2F2" />
+        </LinearLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AddNoteActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/dash_parent_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/five_dp"
+        android:layout_marginRight="@dimen/five_dp"
+        android:layout_marginTop="@dimen/five_dp">
+
+        <TextView
+            android:id="@+id/dashboard_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:letterSpacing="0.05"
+            android:padding="@dimen/ten_dp"
+            android:text="Add Note"
+            android:textColor="@android:color/black"
+            android:textSize="29sp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/settings_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/ten_dp"
+            android:src="@drawable/setting"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dash_parent_rl">
+
+        <EditText
+            android:id="@+id/txtNoteTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Note Title" />
+
+        <EditText
+            android:id="@+id/txtNoteContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Note Content"
+            android:inputType="textMultiLine"
+            android:layout_marginBottom="30dp"
+            android:layout_below="@+id/txtNoteTitle"
+            />
+
+
+        <Button
+            android:id="@+id/saveNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimary"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="Save"
+            android:textColor="#fff" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvAnimals"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="60dp"
+
+            />
+
+        <!--<HorizontalScrollView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="150dp"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:layout_below="@+id/txtNoteContent"-->
+        <!--android:scrollbars="none" >-->
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/id_gallery"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:orientation="horizontal" >-->
+        <!--</LinearLayout>-->
+        <!--</HorizontalScrollView>-->
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            app:menu_colorNormal="@color/colorPrimary"
+            app:menu_colorPressed="@color/colorPrimary"
+            app:menu_colorRipple="@color/colorPrimary"
+            >
+
+
+            <com.github.clans.fab.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="cameraButtonClick"
+                app:fab_label="Camera"
+                android:src="@drawable/ic_camera_alt_black_24dp"
+                app:fab_size="mini"
+                app:fab_colorNormal="@color/colorPrimary"
+                app:fab_colorPressed="@color/colorPrimary"
+                app:fab_colorRipple="@color/colorPrimary"/>
+
+            <com.github.clans.fab.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="galleryButtonClick"
+                app:fab_label="Gallery"
+                android:src="@drawable/ic_photo_black_24dp"
+                app:fab_size="mini"
+                app:fab_colorNormal="@color/colorPrimary"
+                app:fab_colorPressed="@color/colorPrimary"
+                app:fab_colorRipple="@color/colorPrimary"/>
+
+            <com.github.clans.fab.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="audioButtonClick"
+                app:fab_label="Audio"
+                android:src="@drawable/ic_audiotrack_black_24dp"
+                app:fab_size="mini"
+                app:fab_colorNormal="@color/colorPrimary"
+                app:fab_colorPressed="@color/colorPrimary"
+                app:fab_colorRipple="@color/colorPrimary"/>
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/btnMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="mapButtonClick"
+                app:fab_label="Map"
+                android:src="@drawable/ic_location_on_black_24dp"
+                app:fab_size="mini"
+                app:fab_colorNormal="@color/colorPrimary"
+                app:fab_colorPressed="@color/colorPrimary"
+                app:fab_colorRipple="@color/colorPrimary"/>
+
+        </com.github.clans.fab.FloatingActionMenu>
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

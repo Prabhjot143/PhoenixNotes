@@ -1,0 +1,77 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dash_parent_fl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+        <!--List-->
+        <LinearLayout
+            android:id="@+id/active_list_parent_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dash_parent_rl"
+            android:layout_alignBottom="@+id/dash_parent_rl"
+            android:layout_marginLeft="@dimen/five_dp"
+            android:layout_marginRight="@dimen/five_dp"
+            android:layout_marginBottom="0dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+        </LinearLayout>
+        <!--Recycler for list-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/categories_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/active_list_parent_ll"
+            android:layout_marginLeft="@dimen/ten_dp"
+            android:layout_marginRight="@dimen/ten_dp"
+            android:layout_marginTop="@dimen/five_dp"
+            android:visibility="visible">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <!--Add event-->
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <Button
+                android:id="@+id/btnCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="85dp"
+                android:layout_marginLeft="5dp"
+                android:background="#189214"
+                android:onClick="btnAllNotesClick"
+                android:text="All Notes"
+                android:textColor="#F2F2F2" />
+            <ImageView
+                android:id="@+id/add_event_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:layout_marginRight="11dp"
+                android:layout_marginBottom="@dimen/ten_dp"
+                android:src="@drawable/addc" />
+        </FrameLayout>
+    </android.support.constraint.ConstraintLayout>
+
+
+</FrameLayout>
+
+
+

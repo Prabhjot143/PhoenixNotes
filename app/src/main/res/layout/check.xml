@@ -1,0 +1,197 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dash_parent_fl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rel_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <SearchView
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/five_dp"
+            android:layout_marginRight="@dimen/five_dp"
+            android:background="#189214"
+            android:visibility="visible" />
+
+        <!--Dash-->
+        <RelativeLayout
+            android:id="@+id/dash_parent_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etSearch"
+
+            android:layout_marginTop="@dimen/five_dp">
+
+            <TextView
+                android:id="@+id/dashboard_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:letterSpacing="0.05"
+                android:padding="@dimen/ten_dp"
+                android:text="Notes"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <!--<ImageView-->
+            <!--android:id="@+id/settings_iv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:padding="@dimen/ten_dp"-->
+            <!--android:visibility="visible"-->
+            <!--android:src="@drawable/setting" />-->
+
+            <com.project.phoenixNotes.Utils.ShadowLayout
+                android:id="@+id/spinner_sl"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                app:sl_shadow_angle="90"
+                app:sl_shadow_color="@color/share_shadow"
+                android:visibility="gone"
+                app:sl_shadow_distance="5dp"
+                app:sl_shadow_radius="@dimen/five_dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/spinner_parent_rl1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/custom_month_view_background"
+                    android:padding="@dimen/seven_dp">
+
+                    <TextView
+                        android:id="@+id/mdw_view_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/drop_down"
+                        android:letterSpacing="0.1"
+                        android:text="MONTH VIEW"
+                        android:textColor="@color/md_white_1000"
+                        android:textSize="@dimen/twelve_sp"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/arrow_down_iv0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:layout_toRightOf="@id/mdw_view_tv"
+                        android:src="@drawable/drop_down"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/spinner_parent_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/custom_month_view_background"
+                    android:padding="@dimen/seven_dp"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/arrow_down_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/spinner"
+                        android:src="@drawable/drop_down"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+            </com.project.phoenixNotes.Utils.ShadowLayout>>
+
+        </RelativeLayout>
+
+
+        <!--Recycler for list-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/categories_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/dash_parent_rl"
+            android:layout_marginLeft="@dimen/ten_dp"
+            android:layout_marginRight="@dimen/ten_dp"
+            android:layout_marginTop="@dimen/five_dp"
+            android:visibility="visible">
+        </android.support.v7.widget.RecyclerView>
+
+
+
+        <TextView
+            android:id="@+id/no_event_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:letterSpacing="0.1"
+            android:layout_below="@id/dash_parent_rl"
+            android:layout_centerHorizontal="true"
+            android:text="No Notes Available"
+            android:textColor="@color/md_black_1000"
+            android:textSize="25sp"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/can_add_event_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:letterSpacing="0.1"
+            android:layout_below="@id/no_event_tv"
+            android:layout_marginTop="60dp"
+            android:layout_centerHorizontal="true"
+            android:text="You can add an note using the Add note button below."
+            android:textSize="@dimen/sixteen_sp"/>
+
+
+        <!--Add event-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/add_event_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:layout_marginBottom="@dimen/ten_dp"
+                android:layout_marginRight="11dp"
+                android:src="@drawable/addc" />
+        </FrameLayout>
+
+
+    </RelativeLayout>
+</FrameLayout>
+
+
+
